@@ -13,5 +13,10 @@
         "name":"hummus",
         "rank": 3,
         "type": "savory"
+    },
+    {
+        "name":"foi gras",
+        "rank":4,
+        "type":"savory"
     }
 ]
