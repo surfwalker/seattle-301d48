@@ -8,11 +8,13 @@ html, body {
 
 body > * {
     border:1px solid #000;
+    color: #eee;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
 }
 
 body > header, body > footer {
     background:#444;
-    color: #eee;
     height: 70px;
     line-height:70px;
     text-align:center;
