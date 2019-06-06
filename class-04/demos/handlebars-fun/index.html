@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Handlebars Fun</title>
+    <script id="candybar-template" type="text/x-handlebars-template">
+
+            <tr>
+                <td>{{name}}</td>
+                <td>{{calories}}</td>
+            </tr>
+            
+    </script>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li data-page="1">Page 1</li>
+            <li data-page="2">Page 2</li>
+        </ul>
+    </nav>
+
+    <section>
+        <table id="candies" style="width:100%">
+            <tr>
+                <th>Name</th>
+                <th>Calories</th>
+            </tr>
+        </table>
+    </section>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"
+        integrity="sha256-ngJY93C4H39YbmrWhnLzSyiepRuQDVKDNCWO2iyMzFw=" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
