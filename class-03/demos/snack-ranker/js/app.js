@@ -14,6 +14,7 @@ function loadData() {
 
     const failure = error => console.error(error);
 
+    // Hmm, this is hard coded to 'snacks.json' but I want to show 'healthy.json' data sometimes
     $.get('data/snacks.json', 'json')
         .then(success)
         .catch(failure);
