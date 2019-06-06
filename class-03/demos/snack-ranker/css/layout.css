@@ -1,0 +1,41 @@
+.grid {
+    width: 80%;
+    margin: 0 auto;
+}
+.snacks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.snack {
+    width: 33.33%;
+    margin: 1vh 0;
+    background-color: bisque;
+    border-radius: 15px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.pages {
+   width: 80%;
+   border: 3px solid salmon;
+   margin: 1vh auto;
+   padding: 3vh 0; 
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav li {
+    
+    background-color: bisque;
+    border-radius: 15px;
+    padding: 25px;
+}
+

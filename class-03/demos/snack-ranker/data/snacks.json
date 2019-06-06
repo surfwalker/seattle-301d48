@@ -2,21 +2,50 @@
     {
         "name": "snickers",
         "rank": 1,
-        "type": "sweet"
+        "type": "sweet",
+        "url": "http://placecage.com/200/200"
     },
     {
         "name": "salami",
         "rank": 2,
-        "type": "savory"
+        "type": "savory",
+        "url": "http://lorempixel.com/200/200/food/2/"
     },
     {
         "name":"hummus",
         "rank": 3,
-        "type": "savory"
+        "type": "savory",
+        "url": "http://lorempixel.com/200/200/food/3/"
     },
     {
         "name":"foi gras",
         "rank":4,
-        "type":"savory"
+        "type":"savory",
+        "url": "http://lorempixel.com/200/200/food/4/"
+    },
+    {
+        "name":"ice cream",
+        "rank":2,
+        "type":"sweet",
+        "url": "http://lorempixel.com/200/200/food/5/"
+    },
+    {
+        "name":"musabi",
+        "rank":7,
+        "type":"savory",
+        "url": "http://lorempixel.com/200/200/food/6/"
+    },
+    {
+        "name":"haggis",
+        "rank":777,
+        "type":"savory",
+        "url": "http://lorempixel.com/200/200/food/7/"
+    },
+    {
+        "name":"all chips",
+        "rank":2,
+        "type":"savory",
+        "url": "http://lorempixel.com/200/200/food/8/"
     }
+
 ]

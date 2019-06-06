@@ -1,8 +1,10 @@
 function startApp() {
-    
+
     loadData();
 
     attachListeners();
+
+    showCurrentPage(1);
 
 }
 
@@ -19,45 +21,66 @@ function loadData() {
 
 function displayPage(snacks) {
 
+    const template = $('#snack-template').html()
+
+    const render = Handlebars.compile(template);
+
     snacks.forEach(snack => {
-        const $newSnack = $('.snack-template').clone();
 
-        $newSnack.find('h2').text(snack.name);
-        $newSnack.find('h3').text(snack.rank);
-        $newSnack.find('p').text(snack.type);
-        $newSnack.removeClass('snack-template');
-        $newSnack.attr('data-type', snack.type);
+        const newSnack = render(snack);
 
-        $('.snacks').append($newSnack);
+        $('.snacks').append(newSnack);
 
     });
 
 }
 
+
 function attachListeners() {
 
+    // snack type radio buttons
     $('input').on('change', event => {
         const $choice = $(event.target);
         const type = $choice.val();
 
         if (type === 'all') {
-        
-            $('li').not('.snack-template').show();
+
+            $('.snack').show();
 
         } else if (type === 'savory') {
 
-            $('li').hide();
+            $('.snack').hide();
 
-            $('li[data-type="savory"]').show();
-            
+            $('.snack[data-type="savory"]').show();
+
         } else {
-            
-            $('li').hide();
 
-            $('li[data-type="sweet"]').show();
+            $('.snack').hide();
+
+            $('.snack[data-type="sweet"]').show();
         }
 
     });
+
+    // pages
+    $('nav li').on('click', event => {
+        const pageNum = $(event.target).attr('data-page');
+
+        showCurrentPage(pageNum);
+    });
+}
+
+function showCurrentPage(pageNum) {
+    $('.page').hide();
+
+    if (parseInt(pageNum) === 1) {
+        // show page 1 stuff
+        $('.page-1-stuff').show();
+
+    } else {
+        // page 2 stuff
+        $('.page-2-stuff').show();
+    }
 }
 
 $(startApp);

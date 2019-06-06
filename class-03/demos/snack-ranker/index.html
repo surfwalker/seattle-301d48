@@ -8,27 +8,60 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/modules.css">
+
+    <script id="snack-template" type="text/x-handlebars-template">
+        <li data-type="{{type}}" class="snack">
+            <section>
+                <h2>{{name}}</h2>
+                <h3>{{rank}}</h3>
+                <p>{{type}}</p>
+                <img src="{{url}}" alt="{{name}}" />
+            </section>
+        </li>
+    </script>
+
+
     <title>Snack Ranker</title>
 </head>
 <body>
     <h1>Snack Ranker</h1>
     <p>Rank your favorite snacks</p>
+
+    <header>
+            <nav>
+                <ul>
+                    <li data-page="1">Page I</li>
+                    <li data-page="2">Page II</li>
+                </ul>
+            </nav>
+        </header>
     
-    <input type="radio" name="snack-type" value="all" checked>all</input>
-    <input type="radio" name="snack-type" value="sweet">sweet</input>
-    <input type="radio" name="snack-type" value="savory">savory</input>
+        <main>
 
-    <ul class="snacks">
-        <li class="snack-template">
-            <section class="snack">
-                <h2>Name here</h2>
-                <h3>Rank here</h3>
-                <p>type here</p>
+           
+            <input type="radio" name="snack-type" value="all" checked>all</input>
+            <input type="radio" name="snack-type" value="sweet">sweet</input>
+            <input type="radio" name="snack-type" value="savory">savory</input>
+         
+
+            <section class="pages">
+                <div class="page-1-stuff page">page 1 stuff</div> 
+                <div class="page-2-stuff page">page 2 stuff</div> 
             </section>
-        </li>
-    </ul>
+            
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+            <div class="grid">
+                
+                <ul class="snacks">
+                    <!-- snacks here -->
+                </ul>
+                
+            </div>
+            
+        </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js" integrity="sha256-ngJY93C4H39YbmrWhnLzSyiepRuQDVKDNCWO2iyMzFw=" crossorigin="anonymous"></script>
     <script src="js/app.js"></script>
 </body>
 </html>

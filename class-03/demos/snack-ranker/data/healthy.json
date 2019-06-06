@@ -1,0 +1,26 @@
+[
+    {
+        "name": "radishes",
+        "rank": 1,
+        "type": "vegetable",
+        "url": "http://lorempixel.com/200/200/food/5/"
+    },
+    {
+        "name": "salsa",
+        "rank": 3,
+        "type": "vegetable",
+        "url": "http://lorempixel.com/200/200/food/6/"
+    },
+    {
+        "name":"broccoli",
+        "rank": 33,
+        "type": "vegetable",
+        "url": "http://lorempixel.com/200/200/food/7/"
+    },
+    {
+        "name":"mango",
+        "rank":2,
+        "type":"fruit",
+        "url": "http://lorempixel.com/200/200/food/8/"
+    }
+]
