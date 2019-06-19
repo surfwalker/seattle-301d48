@@ -1,12 +1,13 @@
 'use strict'
 
+// Environment variables
+require('dotenv').config();
+
 // Application Dependencies
 const express = require('express');
 const pg = require('pg');
 const methodOverride = require('method-override');
 
-// Environment variables
-require('dotenv').config();
 
 // Application Setup
 const app = express();
@@ -68,7 +69,6 @@ function getOneTask(request, response) {
 
   return client.query(SQL, values)
     .then(result => {
-      // console.log('single', result.rows[0]);
       return response.render('pages/detail-view', { task: result.rows[0] });
     })
     .catch(err => handleError(err, response));
@@ -80,6 +80,7 @@ function showForm(request, response) {
 
 function addTask(request, response) {
   console.log(request.body);
+
   let { title, description, category, contact, status } = request.body;
 
   let SQL = 'INSERT INTO tasks(title, description, category, contact, status) VALUES ($1, $2, $3, $4, $5);';
