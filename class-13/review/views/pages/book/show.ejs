@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('../../layout/head') %>
+</head>
+
+<body>
+  <%- include('../../layout/header') %>
+  <main>
+    <section class="book-container detail-view">
+      <img src="<%= book.image_url %>">
+      <h3>
+        <%= book.title %><% if (book.subtitle) { %>: <%= book.subtitle %> <% } %>
+      </h3>
+      <span>
+        <%= book.author %>
+      </span>
+      <p class="desc">
+        <%= book.description %>
+      </p>
+      <p class="isbn">
+        <%= book.isbn %>
+      </p>
+    </section>
+  </main>
+  <%- include('../../layout/footer') %>
+</body>
+
+</html>
