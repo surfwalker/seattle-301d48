@@ -48,6 +48,8 @@ app.post('/add', addTask);
 
 app.put('/update/:task_id', updateTask);
 
+app.delete('/tasks/:task_id', deleteTask);
+
 app.get('*', (req, res) => res.status(404).send('This route does not exist'));
 
 app.listen(PORT, () => console.log(`Listening on port: ${PORT}`));
@@ -102,6 +104,15 @@ function updateTask(request, response) {
   client.query(SQL, values)
     .then(response.redirect(`/tasks/${request.params.task_id}`))
     .catch(err => handleError(err, response));
+}
+
+function deleteTask(request, response) {
+  const id = request.params.task_id;
+  const sql = `DELETE FROM tasks WHERE id=${id}`;
+
+  client.query(sql).then(result => {
+    response.send(result.rows);
+  });
 }
 
 function handleError(error, response) {
