@@ -27,7 +27,7 @@ app.get('/', getBooks);
 app.post('/searches', createSearch);
 app.get('/searches/new', newSearch);
 app.post('/books', createBook);
-app.get('/book/:id', getBook);
+app.get('/books/:id', getBook);
 
 
 app.get('*', (request, response) => response.status(404).send('This route does not exist'));
@@ -73,7 +73,7 @@ function createBook(req, res) {
       SQL = 'SELECT * FROM "books" WHERE isbn=$1;';
       values = [req.body.isbn];
       return client.query(SQL, values)
-        .then(result => res.redirect(`/book/${result.rows[0].id}`))
+        .then(result => res.redirect(`/books/${result.rows[0].id}`))
         .catch(err => handleError(err, res))
     })
     .catch(err => handleError(err, res));
