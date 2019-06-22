@@ -1,0 +1,15 @@
+DROP TABLE IF EXISTS musicians;
+DROP TABLE IF EXISTS bands;
+
+CREATE TABLE bands (
+id SERIAL PRIMARY KEY,
+name VARCHAR(255)
+);
+
+CREATE TABLE musicians (
+id SERIAL PRIMARY KEY,
+first_name VARCHAR(255),
+last_name VARCHAR(255),
+band_id INTEGER NOT NULL,
+FOREIGN KEY (band_id) REFERENCES bands (id)
+);
