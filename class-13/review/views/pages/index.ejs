@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('../layout/head') %>
+</head>
+
+<body>
+  <%- include('../layout/header') %>
+  <main>
+    <h4 class="view-title">Saved Books</h4>
+    <p><%= books.length %> books on shelf</p>
+    <ul id="book-list">
+      <% books.forEach(book => { %>
+      <li>
+        <h3><%= book.title %></h3>
+        <img src="<%= book.image_url %>">
+        <span>
+          <%= book.author %>
+        </span>
+        <p>
+          <%= book.description %>
+        </p>
+      </li>
+      <% })%>
+    </ul>
+  </main>
+  <%- include('../layout/footer') %>
+</body>
+
+</html>
